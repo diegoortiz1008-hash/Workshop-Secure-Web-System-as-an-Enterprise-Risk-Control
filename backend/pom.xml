@@ -11,8 +11,8 @@
 	<groupId>com.example</groupId>
 	<artifactId>enterprise-risk-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name/>
-	<description/>
+	<name>enterprise-risk-api</name>
+	<description>Enterprise Risk Lab API - OAuth 2.0 Resource Server protected by Auth0</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -42,6 +42,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webmvc</artifactId>
 		</dependency>
+		<!-- Exposes /actuator/health, used to verify the systemd service (Part 5) -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -61,6 +66,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>enterprise-risk-api</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
